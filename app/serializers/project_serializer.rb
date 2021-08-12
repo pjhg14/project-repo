@@ -1,3 +1,3 @@
 class ProjectSerializer < ActiveModel::Serializer
-    attributes :id, :title, :short_desc, :description, :repo_url, :demo_url, :url
+  attributes :id, :title, :image_url, :short_desc, :long_desc, :repo_url, :video_url, :live_url
 end
