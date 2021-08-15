@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_08_12_214443) do
     t.string "repo_url"
     t.string "video_url"
     t.string "live_url"
+    t.integer "priority"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -7,6 +7,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :repo_url
       t.string :video_url
       t.string :live_url
+      t.integer :priority
 
       t.timestamps
     end
