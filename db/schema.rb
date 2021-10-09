@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_12_214443) do
+ActiveRecord::Schema.define(version: 2021_10_08_032404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,10 +47,37 @@ ActiveRecord::Schema.define(version: 2021_08_12_214443) do
     t.string "title"
     t.string "short_desc"
     t.string "long_desc"
-    t.string "repo_url"
+    t.datetime "completion_date"
     t.string "video_url"
     t.string "live_url"
-    t.integer "priority"
+    t.integer "complexity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "projects_technologies", id: false, force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "technology_id", null: false
+  end
+
+  create_table "repositories", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "host"
+    t.string "type"
+    t.string "link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "requirements", force: :cascade do |t|
+    t.integer "project_id"
+    t.text "req"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

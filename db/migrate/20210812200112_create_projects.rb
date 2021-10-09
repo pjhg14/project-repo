@@ -4,10 +4,10 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :title
       t.string :short_desc
       t.string :long_desc
-      t.string :repo_url
+      t.datetime :completion_date
       t.string :video_url
       t.string :live_url
-      t.integer :priority
+      t.integer :complexity
 
       t.timestamps
     end
