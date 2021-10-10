@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_08_032404) do
+ActiveRecord::Schema.define(version: 2021_10_10_193037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 2021_10_08_032404) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "collaborators", force: :cascade do |t|
+    t.integer "project_id"
+    t.string "type"
+    t.string "name"
+    t.string "site"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "short_desc"
@@ -53,11 +62,6 @@ ActiveRecord::Schema.define(version: 2021_10_08_032404) do
     t.integer "complexity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "projects_technologies", id: false, force: :cascade do |t|
-    t.bigint "project_id", null: false
-    t.bigint "technology_id", null: false
   end
 
   create_table "repositories", force: :cascade do |t|
@@ -86,6 +90,13 @@ ActiveRecord::Schema.define(version: 2021_10_08_032404) do
     t.string "username"
     t.string "password_digest"
     t.boolean "is_admin"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "utilizations", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "technology_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

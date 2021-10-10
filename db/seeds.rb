@@ -6,4 +6,11 @@
 #       movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #       Character.create(name: 'Luke', movie: movies.first)
 
-# Create list of technologies I am proficient with
+# Create list of technologies I feel I am proficient with at the time of writing this
+Technology.create(name: "Java")
+Technology.create(name: "JavaScript")
+Technology.create(name: "Ruby")
+Technology.create(name: "React")
+Technology.create(name: "Rails")
+
+# Rest of the stuff will be added later :P
