@@ -10,6 +10,7 @@ local:
 # for new clones remember to add cloudinary.yml into /config folder
 cloudinary:
   service: Cloudinary
+  folder: portfolio-website
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:

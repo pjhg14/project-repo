@@ -8,6 +8,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :video_url
       t.string :live_url
       t.integer :complexity
+      t.string :image
 
       t.timestamps
     end

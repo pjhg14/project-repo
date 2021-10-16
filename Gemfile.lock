@@ -89,9 +89,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    image_processing (1.12.1)
-      mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.17, < 3)
     jsonapi-renderer (0.2.2)
     jwt (2.2.3)
     listen (3.5.1)
@@ -107,7 +104,6 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0704)
-    mini_magick (4.11.0)
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
@@ -159,8 +155,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    ruby-vips (2.1.2)
-      ffi (~> 1.12)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -189,7 +183,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   cloudinary
-  image_processing (~> 1.2)
   jwt
   listen (~> 3.3)
   pg (~> 1.1)

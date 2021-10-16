@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :repositories, only: [:destroy]
 
   post "/user/login", to: "users#login"
+  post "/upload/:id", to: "projects#upload"
 end
