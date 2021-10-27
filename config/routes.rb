@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :technologies, only: [:index, :create, :destroy]
   resources :requirements, only: [:create, :update, :destroy]
   resources :repositories, only: [:create, :update, :destroy]
+  resources :utilizations, only: [:create, :destroy]
 
   post "/user/login", to: "users#login"
   post "/upload/:id", to: "projects#upload"
